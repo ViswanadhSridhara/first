@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY FIRST FORM</title>
+    <link rel="icon" type="image/jpg" href="images/oggy.jpg">
+    <style>
+        label{
+            color:rgb(245, 239, 239);
+        }
+        body{
+           
+            background-image: url(ayodhya.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+    </style>
+</head>
+<body >
+
+    <form action="form.php" method="POST">
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="BulliMunda" minlength="4" maxlength="10" required><br>
+
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required placeholder="hi@1234"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="agentace2007@gmail.com"><br>
+        
+        <label for="phone">PhoneNumber:</label>
+        <input type="phone" id="phone" placeholder="1234567890" minlength="10" maxlength="10"><br>
+
+        <label for="bday">BirthDate</label>
+        <input type="date" id="bday" required><br>
+
+        <label for="title">Gender:</label>
+        
+        <label for="MALE">MALE</label>
+        <input type="radio" id="MALE" value="MALE" name="title">
+        <label for="FEMALE">FEMALE</label>
+        <input type="radio" id="FEMALE" value="FEMALE" name="title">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adi
+        </p>
+        <input type="reset">
+        <input type="Submit">
+    </form>
+</body>
+</html> 
