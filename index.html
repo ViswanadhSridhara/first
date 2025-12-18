@@ -4,55 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY FIRST FORM</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/jpg" href="images/oggy.jpg">
+
     <style>
-        label{
-            color:rgb(245, 239, 239);
-        }
-        body{
-           
-            background-image: url("C:\Users\sridh\Downloads\ayodhya.jpg");
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            /* ✅ USE RELATIVE PATH */
+            background-image: url("images/ayodhya.jpg");
             background-repeat: no-repeat;
             background-position: center;
-            background-attachment: fixed;
             background-size: cover;
+
+            /* Center the table */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        
+
+        table {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        label {
+            color: rgb(245, 239, 239);
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input {
+            padding: 6px;
+        }
+
+        p {
+            color: white;
+        }
     </style>
 </head>
-<body >
+
+<body>
 
     <form action="form.php" method="POST">
+        <table>
+            <tr>
+                <td><label for="username">Username:</label></td>
+                <td><input type="text" id="username" placeholder="BulliMunda" minlength="4" maxlength="10" required></td>
+            </tr>
 
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="BulliMunda" minlength="4" maxlength="10" required><br>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" required placeholder="hi@1234"></td>
+            </tr>
 
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" placeholder="agentace2007@gmail.com"></td>
+            </tr>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" required placeholder="hi@1234"><br>
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td><input type="tel" id="phone" placeholder="1234567890" minlength="10" maxlength="10"></td>
+            </tr>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="agentace2007@gmail.com"><br>
-        
-        <label for="phone">PhoneNumber:</label>
-        <input type="phone" id="phone" placeholder="1234567890" minlength="10" maxlength="10"><br>
+            <tr>
+                <td><label for="bday">Birth Date:</label></td>
+                <td><input type="date" id="bday" required></td>
+            </tr>
 
-        <label for="bday">BirthDate</label>
-        <input type="date" id="bday" required><br>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" id="MALE" name="title" value="MALE">
+                    <label for="MALE">Male</label>
 
-        <label for="title">Gender:</label>
-        
-        <label for="MALE">MALE</label>
-        <input type="radio" id="MALE" value="MALE" name="title">
-        <label for="FEMALE">FEMALE</label>
-        <input type="radio" id="FEMALE" value="FEMALE" name="title">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adi
-        </p>
-        <input type="reset">
-        <input type="Submit">
+                    <input type="radio" id="FEMALE" name="title" value="FEMALE">
+                    <label for="FEMALE">Female</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adi</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="reset"></td>
+                <td><input type="submit"></td>
+            </tr>
+        </table>
     </form>
-</body>
 
-</html> 
+</body>
+</html>
 
